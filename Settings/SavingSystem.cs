@@ -4,7 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     public class SavingSystem
     {

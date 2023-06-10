@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Threading;
 
-namespace DJeye_Wrapper.Modules
+namespace DJeyeMouseWrapper.Modules
 {
     public class RenderingModule : IDisposable
     {

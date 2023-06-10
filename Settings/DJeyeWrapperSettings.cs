@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     [Serializable]
     public class DJeyeWrapperSettings

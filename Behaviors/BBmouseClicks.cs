@@ -1,7 +1,7 @@
-﻿using DJeye_Wrapper.Modules;
+﻿using DJeyeMouseWrapper.Modules;
 using NeeqDMIs.Eyetracking.Tobii;
 
-namespace DJeye_Wrapper.Behaviors
+namespace DJeyeMouseWrapper.Behaviors
 {
     internal class BBmouseClicks : ATobiiBlinkBehavior
     {

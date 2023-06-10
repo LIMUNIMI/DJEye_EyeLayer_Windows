@@ -1,6 +1,6 @@
 ﻿using BlankADMI.Behaviors;
-using DJeye_Wrapper.Behaviors;
-using DJeye_Wrapper.Modules;
+using DJeyeMouseWrapper.Behaviors;
+using DJeyeMouseWrapper.Modules;
 using NeeqDMIs.Eyetracking.MouseEmulator;
 using NeeqDMIs.Eyetracking.PointFilters;
 using NeeqDMIs.Eyetracking.Tobii;
@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Interop;
 
-namespace DJeye_Wrapper.Setups
+namespace DJeyeMouseWrapper.Setups
 {
     public class DefaultSetup : ISetup
     {

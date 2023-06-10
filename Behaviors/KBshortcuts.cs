@@ -1,4 +1,4 @@
-﻿using DJeye_Wrapper.Modules;
+﻿using DJeyeMouseWrapper.Modules;
 using NeeqDMIs.Keyboard;
 using RawInputProcessor;
 

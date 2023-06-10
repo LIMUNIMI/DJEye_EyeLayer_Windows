@@ -1,7 +1,7 @@
 ﻿using NeeqDMIs.Music;
 using System;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     [Serializable]
     internal class DefaultSettings : DJeyeWrapperSettings

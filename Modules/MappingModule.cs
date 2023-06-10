@@ -1,8 +1,8 @@
-﻿using DJeye_Wrapper.Modules;
+﻿using DJeyeMouseWrapper.Modules;
 using NeeqDMIs.MicroLibrary;
 using NeeqDMIs.Mouse;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     /// <summary>
     /// A blank mapping module, which will contain the instrument mapping. Rename and edit!

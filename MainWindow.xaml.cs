@@ -1,10 +1,10 @@
-﻿using DJeye_Wrapper.Modules;
-using DJeye_Wrapper.Setups;
+﻿using DJeyeMouseWrapper.Modules;
+using DJeyeMouseWrapper.Setups;
 using NeeqDMIs.Eyetracking.PointFilters;
 using NeeqDMIs.Template;
 using System.Windows;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     /// <summary>
     /// Interaction logic for the instrument window

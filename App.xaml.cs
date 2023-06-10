@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace DJeye_Wrapper
+namespace DJeyeMouseWrapper
 {
     /// <summary>
     /// Logica di interazione per App.xaml

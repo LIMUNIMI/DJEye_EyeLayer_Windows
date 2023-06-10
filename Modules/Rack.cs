@@ -1,9 +1,9 @@
-﻿using DJeye_Wrapper.Behaviors;
+﻿using DJeyeMouseWrapper.Behaviors;
 using NeeqDMIs.Eyetracking.Tobii;
 using NeeqDMIs.Keyboard;
 using NeeqDMIs.Mouse;
 
-namespace DJeye_Wrapper.Modules
+namespace DJeyeMouseWrapper.Modules
 {
     /// <summary>
     /// This will contains all the modules
