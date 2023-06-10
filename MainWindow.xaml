@@ -1,0 +1,65 @@
+﻿<Window x:Class="DJeye_Wrapper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="DJeye mouse wrapper" WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen" WindowState="Normal"  Width="384" Height="433" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid Background="Black">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <!-- TITLE PANEL -->
+            <StackPanel Grid.Row="0" Orientation="Vertical">
+                <Label Content="DJeye mouse wrapper" FontFamily="Magneto" FontSize="20" Foreground="White" />
+                <Label Content="Use this application to control the mouse through your eye tracker" Foreground="White" FontStyle="Italic" />
+            </StackPanel>
+            <!-- LONG STACKPANEL -->
+            <StackPanel Grid.Row="1" Orientation="Vertical">
+                <Label/>
+                <CheckBox Name="cbxEnabled" IsChecked="False" Content="Enabled" Foreground="White" Margin="3,3,3,3" Checked="cbxEnabled_Checked" Unchecked="cbxEnabled_Unchecked"/>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnSmoothM" Content="-" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnSmoothM_Click"/>
+                    <TextBlock Name="txtSmooth" Text="0" Height="Auto" Width="30px"/>
+                    <Button Name="btnSmoothP" Content="+" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnSmoothP_Click"/>
+                    <Label Content="Smoothing filter weight"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnWinkThreshM" Content="-" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnWinkThreshM_Click"/>
+                    <TextBlock Name="txtWinkThresh" Text="0" Height="Auto" Width="30px"/>
+                    <Button Name="btnWinkThreshP" Content="+" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnWinkThreshP_Click"/>
+                    <Label Content="One eye wink threshold (samples)"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnBlinkThreshM" Content="-" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnBlinkThreshM_Click"/>
+                    <TextBlock Name="txtBlinkThresh" Text="0" Height="Auto" Width="30px"/>
+                    <Button Name="btnBlinkThreshP" Content="+" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnBlinkThreshP_Click"/>
+                    <Label Content="Two eyes blink threshold (samples)"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnScrollDeadzoneM" Content="-" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnScrollDeadzoneM_Click"/>
+                    <TextBlock Name="txtScrollDeadzone" Text="0" Height="Auto" Width="30px"/>
+                    <Button Name="btnScrollDeadzoneP" Content="+" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnScrollDeadzoneP_Click"/>
+                    <Label Content="Scrolling deadzone"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Name="btnScrollSpeedM" Content="-" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnScrollSpeedM_Click"/>
+                    <TextBlock Name="txtScrollSpeed" Text="0" Height="Auto" Width="30px"/>
+                    <Button Name="btnScrollSpeedP" Content="+" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnScrollSpeedP_Click"/>
+                    <Label Content="Scrolling speed (milliseconds)"/>
+                </StackPanel>
+                <Label/>
+                <Label Content="Guide" FontWeight="Bold"/>
+                <TextBlock TextAlignment="Left" Margin="5,0,0,0" HorizontalAlignment="Left" Text="Left eye wink will trigger a single click&#10;Two eyes blink will trigger a double click&#10;Right eye wink, then head up/down will scroll mouse wheel"/>
+                <Label/>
+                <TextBlock Visibility ="Visible" TextAlignment="Left" Margin="5,0,0,0" HorizontalAlignment="Left" Text="Use E to force enable&#10;Use D to force disable"/>
+                <TextBlock Name="txtTest" Visibility ="Hidden" TextAlignment="Left" Margin="5,0,0,0" HorizontalAlignment="Left" Text=""/>
+                <Button Name="btnTest" Visibility="Hidden" Content="Test" Width="30" HorizontalAlignment="Left" Margin="3,3,3,3" Click="btnTest_Click"/>
+
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
