@@ -54,6 +54,7 @@ namespace DJeyeMouseWrapper.Setups
 
             // Behaviors spawn
             Rack.TobiiModule.BlinkBehaviors.Add(Rack.BBmouseClicks);
+            Rack.TobiiModule.BlinkBehaviors.Add(new BBsuppressHorizontalPeak());
             Rack.KeyboardModule.KeyboardBehaviors.Add(new KBshortcuts());
 
             // Add disposables to list

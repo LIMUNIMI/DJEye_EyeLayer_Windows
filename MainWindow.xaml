@@ -4,10 +4,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="DJeye mouse wrapper" WindowStyle="SingleBorderWindow" ResizeMode="NoResize"
+        Title="DJeye mouse wrapper" WindowStyle="SingleBorderWindow" ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen" WindowState="Normal"  Width="384" Height="433" Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid Background="Black">
-        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="1*" />

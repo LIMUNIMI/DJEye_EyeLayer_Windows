@@ -8,8 +8,8 @@ namespace BlankADMI.Behaviors
     {
         const VKeyCodes keyEnable = VKeyCodes.E;
         const VKeyCodes keyDisable = VKeyCodes.D;
-        const VKeyCodes keyShow = VKeyCodes.S;
-        const VKeyCodes keyHide = VKeyCodes.H;
+        //const VKeyCodes keyShow = VKeyCodes.S;
+        //const VKeyCodes keyHide = VKeyCodes.H;
         public int ReceiveEvent(RawInputEventArgs e)
         {
             if(e.VirtualKey == (int)keyEnable && e.KeyPressState == KeyPressState.Down)

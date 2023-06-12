@@ -9,6 +9,7 @@ namespace DJeyeMouseWrapper
     /// </summary>
     public class MappingModule
     {
+        public bool suppressGaze = false;
         private readonly int SCROLLING_SPEED = 120;
         private bool enabled = false;
 
@@ -24,6 +25,27 @@ namespace DJeyeMouseWrapper
         }
 
         public bool IsHoldScroll { get; private set; } = false;
+
+        public bool SuppressGaze
+        {
+            get { return suppressGaze; }
+            set
+            {
+                if (value != suppressGaze && !IsHoldScroll && Enabled) // Switch false -> true
+                {
+                    suppressGaze = value;
+                    if (suppressGaze)
+                    {
+                        Rack.TobiiModule.MouseEmulator.Enabled = false;
+                    }
+                    else
+                    {
+                        Rack.TobiiModule.MouseEmulator.Enabled = true;
+                    }
+                }
+            }
+        }
+
         private double HoldScrollY { get; set; }
 
         private MicroTimer TimerScroll { get; set; }
@@ -78,15 +100,14 @@ namespace DJeyeMouseWrapper
         private void TimerScroll_MicroTimerElapsed(object sender, MicroTimerEventArgs e)
         {
             double verticalOffset = Rack.TobiiModule.LastEyePositionData.LeftEye.Y - HoldScrollY;
-            if(verticalOffset > Rack.UserSettings.DeadzoneSize)
+            if (verticalOffset > Rack.UserSettings.DeadzoneSize)
             {
                 Rack.MouseModule.SendMouseWheelMove(SCROLLING_SPEED);
             }
-            else if(verticalOffset < -Rack.UserSettings.DeadzoneSize)
+            else if (verticalOffset < -Rack.UserSettings.DeadzoneSize)
             {
                 Rack.MouseModule.SendMouseWheelMove(-SCROLLING_SPEED);
             }
-           
         }
     }
 }

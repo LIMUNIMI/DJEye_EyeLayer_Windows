@@ -187,6 +187,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Behaviors\BBmouseClicks.cs" />
+    <Compile Include="Behaviors\BBsuppressHorizontalPeak.cs" />
+    <Compile Include="Behaviors\KBshorcutsAlt.cs" />
     <Compile Include="Behaviors\KBshortcuts.cs" />
     <Compile Include="Modules\MappingModule.cs" />
     <Compile Include="Settings\DefaultSettings.cs" />
